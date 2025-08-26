@@ -8,13 +8,14 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class HomePageTests {
+public class HomePageTests extends utilities.base {
   
 	static WebDriver driver;
 
 	@BeforeClass
 	public void setup() {
-		driver = new ChromeDriver();
+		driver=LaunchBrowser();
+        
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(10));
 		driver.manage().window().maximize();

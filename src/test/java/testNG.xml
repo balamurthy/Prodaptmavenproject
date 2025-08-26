@@ -6,7 +6,7 @@
   <test name="TestMorning">
     <groups>
     <run>
-      <include name="smoketest"/>
+      <include name="sanitytest"/>
     </run>
   </groups>
     
