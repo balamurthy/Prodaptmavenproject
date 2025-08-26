@@ -1,16 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
+<testng-results ignored="3" total="5" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-26T11:25:30 IST" name="Suite" finished-at="2025-08-26T11:25:53 IST" duration-ms="23849">
+  <suite started-at="2025-08-26T12:19:38 IST" name="Suite" finished-at="2025-08-26T12:20:13 IST" duration-ms="35513">
     <groups>
-      <group name="sanitytest">
-        <method signature="OrangeHrmLoginTest.login()[pri:0, instance:testNGTestCases.OrangeHrmLoginTest@38c6f217]" name="login" class="testNGTestCases.OrangeHrmLoginTest"/>
-      </group> <!-- sanitytest -->
+      <group name="regressiontest">
+        <method signature="OrangeHrmLoginTest.login(java.lang.String,java.lang.String)[pri:0, instance:testNGTestCases.OrangeHrmLoginTest@7f0eb4b4]" name="login" class="testNGTestCases.OrangeHrmLoginTest"/>
+      </group> <!-- regressiontest -->
     </groups>
-    <test started-at="2025-08-26T11:25:30 IST" name="TestMorning" finished-at="2025-08-26T11:25:53 IST" duration-ms="23849">
+    <test started-at="2025-08-26T12:19:38 IST" name="TestMorning" finished-at="2025-08-26T12:20:13 IST" duration-ms="35513">
       <class name="testNGTestCases.OrangeHrmLoginTest">
-        <test-method signature="login()[pri:0, instance:testNGTestCases.OrangeHrmLoginTest@38c6f217]" started-at="2025-08-26T11:25:30 IST" name="login" finished-at="2025-08-26T11:25:53 IST" duration-ms="23784" status="FAIL">
+        <test-method signature="login(java.lang.String,java.lang.String)[pri:0, instance:testNGTestCases.OrangeHrmLoginTest@7f0eb4b4]" started-at="2025-08-26T12:19:38 IST" name="login" data-provider="dp" finished-at="2025-08-26T12:19:51 IST" duration-ms="12683" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="login(java.lang.String,java.lang.String)[pri:0, instance:testNGTestCases.OrangeHrmLoginTest@7f0eb4b4]" started-at="2025-08-26T12:19:51 IST" name="login" data-provider="dp" finished-at="2025-08-26T12:20:13 IST" duration-ms="22751" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abcd]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[bjjjj]]>
+              </value>
+            </param>
+          </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -23,7 +51,7 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 at org.testng.Assert.assertEquals(Assert.java:122)
 at org.testng.Assert.assertEquals(Assert.java:819)
 at org.testng.Assert.assertEquals(Assert.java:829)
-at testNGTestCases.OrangeHrmLoginTest.login(OrangeHrmLoginTest.java:44)
+at testNGTestCases.OrangeHrmLoginTest.login(OrangeHrmLoginTest.java:51)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)

@@ -2,6 +2,7 @@ package testNGTestCases;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,12 +17,18 @@ import org.testng.annotations.AfterClass;
 
 public class OrangeHrmLoginTest extends utilities.base {
   static WebDriver driver;
-	@Test(groups = { "sanitytest" })
-  public void login() {
+
+  @DataProvider
+  public Object[][] dp() {
+    return new Object[][] {
+      new Object[] { "Admin", "admin123" },
+      new Object[] { "abcd", "bjjjj" },
+    };
+  }
+  
+  @Test(groups = { "regressiontest" }, dataProvider = "dp")
+  public void login(String un, String pw) {
         driver=LaunchBrowser();
-        
-        String un="bbb";
-        String pw="admin123";
         
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(10));

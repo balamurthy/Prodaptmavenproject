@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,10 +104,24 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testNGTestCases.OrangeHrmLoginTest" class="method navigator-link" hash-for-method="login">login</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testNGTestCases.OrangeHrmLoginTest" class="method navigator-link" hash-for-method="login(abcd, bjjjj)">login(abcd, bjjjj)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testNGTestCases.OrangeHrmLoginTest" class="method navigator-link" hash-for-method="login(Admin, admin123)">login(Admin, admin123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -127,11 +141,12 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="login">
-                  </a> <!-- login -->
+                  <a name="login(abcd, bjjjj)">
+                  </a> <!-- login(abcd, bjjjj) -->
                   <span class="method-name">login</span>
+                  <span class="parameters">(abcd, bjjjj)</span>
                   <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at testNGTestCases.OrangeHrmLoginTest.login(OrangeHrmLoginTest.java:44)
+	at testNGTestCases.OrangeHrmLoginTest.login(OrangeHrmLoginTest.java:51)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 ... Removed 31 stack frames
 </div> <!-- stack-trace -->
@@ -139,6 +154,22 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testNGTestCases.OrangeHrmLoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="login(Admin, admin123)">
+                  </a> <!-- login(Admin, admin123) -->
+                  <span class="method-name">login</span>
+                  <span class="parameters">(Admin, admin123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -149,15 +180,17 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;TestMorning&quot;&gt;
     &lt;groups&gt;
       &lt;run&gt;
-        &lt;include name=&quot;sanitytest&quot;/&gt;
+        &lt;include name=&quot;regressiontest&quot;/&gt;
       &lt;/run&gt;
     &lt;/groups&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testNGTestCases.HomePageTests&quot;/&gt;
       &lt;class name=&quot;testNGTestCases.OrangeHrmLoginTest&quot;/&gt;
+      &lt;class name=&quot;testNGTestCases.NewTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- TestMorning --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -171,7 +204,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">TestMorning (2 classes)</span>
+                <span class="test-name">TestMorning (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -182,7 +215,7 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">sanitytest</span>
+              <span class="test-group-name">regressiontest</span>
               <br/>
               <div class="method-in-group">
                 <span class="method-in-group-name">login</span>
@@ -205,16 +238,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'login')
 data.setCell(0, 2, 'testNGTestCases.OrangeHrmLoginTest')
-data.setCell(0, 3, 23784);
+data.setCell(0, 3, 22751);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'login')
+data.setCell(1, 2, 'testNGTestCases.OrangeHrmLoginTest')
+data.setCell(1, 3, 12683);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 23 seconds</span>
+              <span class="suite-total-time">Total running time: 35 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -229,9 +266,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testNGTestCases.NewTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">f</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
               <span class="ignored-class-name">testNGTestCases.HomePageTests</span>
               <div class="ignored-methods-div">
@@ -251,10 +295,14 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">testNGTestCases.OrangeHrmLoginTest</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <span class="method-name">login(Admin, admin123)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">login</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-name">login(abcd, bjjjj)</span>
+                <span class="method-start">12689 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
