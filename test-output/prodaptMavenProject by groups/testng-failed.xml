@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [prodaptMavenProject by groups]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="param-val-not-found"/>
+  <test thread-count="5" name="GRP-sanitytest(failed)">
+    <groups>
+      <run>
+        <include name="sanitytest"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testNGTestCases.HomePageTests">
+        <methods>
+          <include name="checkBrokenLinks"/>
+        </methods>
+      </class> <!-- testNGTestCases.HomePageTests -->
+    </classes>
+  </test> <!-- GRP-sanitytest(failed) -->
+</suite> <!-- Failed suite [prodaptMavenProject by groups] -->

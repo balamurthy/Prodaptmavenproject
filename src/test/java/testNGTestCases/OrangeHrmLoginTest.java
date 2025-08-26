@@ -28,7 +28,7 @@ public class OrangeHrmLoginTest extends utilities.base {
   
   @Test(groups = { "regressiontest" }, dataProvider = "dp")
   public void login(String un, String pw) {
-        driver=LaunchBrowser();
+       
         
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(10));
@@ -52,7 +52,7 @@ public class OrangeHrmLoginTest extends utilities.base {
   }
   @BeforeClass
   public void beforeClass() {
-	  	
+	  driver=LaunchBrowser();
 	  	driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(10));
 		driver.manage().window().maximize();

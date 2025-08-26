@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <parameter name="browser" value="firefox"/>
   <test thread-count="5" name="TestMorning(failed)">
-    <groups>
-      <run>
-        <include name="regressiontest"/>
-      </run>
-    </groups>
     <classes>
-      <class name="testNGTestCases.OrangeHrmLoginTest">
+      <class name="seleniumTests.linkCheck">
         <methods>
-          <include name="login" invocation-numbers="1"/>
+          <include name="linkTest"/>
         </methods>
-      </class> <!-- testNGTestCases.OrangeHrmLoginTest -->
+      </class> <!-- seleniumTests.linkCheck -->
     </classes>
   </test> <!-- TestMorning(failed) -->
 </suite> <!-- Failed suite [Suite] -->
