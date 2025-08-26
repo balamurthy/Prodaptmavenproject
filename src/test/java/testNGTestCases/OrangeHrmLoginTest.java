@@ -19,10 +19,14 @@ public class OrangeHrmLoginTest extends utilities.base {
 	@Test(groups = { "sanitytest" })
   public void login() {
         driver=LaunchBrowser();
+        
+        String un="bbb";
+        String pw="admin123";
+        
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(10));
-		driver.findElement(By.xpath("//input[@placeholder=\"Username\"]")).sendKeys("Admin");
-		driver.findElement(By.name("password")).sendKeys("admin123");
+		driver.findElement(By.xpath("//input[@placeholder=\"Username\"]")).sendKeys(un);
+		driver.findElement(By.name("password")).sendKeys(pw);
 		driver.findElement(By.cssSelector("#app > div.orangehrm-login-layout > div > div.orangehrm-login-container > div > div.orangehrm-login-slot > div.orangehrm-login-form > form > div.oxd-form-actions.orangehrm-login-action > button")).click();
 
 		boolean loginSuccess;
@@ -33,6 +37,9 @@ public class OrangeHrmLoginTest extends utilities.base {
 		catch (NoSuchElementException e) {
 			System.out.println("Login Failed - user dropdown not found");
 				loginSuccess = false;
+				highlightElement(driver, driver.findElement(By.xpath("//p[text()=\"Invalid credentials\"]")));
+				captureScreenShot(driver, un +"_" + pw + ".jpg");
+				 
 			}
 		Assert.assertEquals(loginSuccess, true);
   }
