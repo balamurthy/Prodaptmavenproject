@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="seleniumTests.linkCheck">
+      <class name="testNGTestCases.linkCheck">
         <methods>
           <include name="linkTest"/>
         </methods>
-      </class> <!-- seleniumTests.linkCheck -->
+      </class> <!-- testNGTestCases.linkCheck -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

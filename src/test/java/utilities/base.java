@@ -2,6 +2,8 @@ package utilities;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -59,6 +61,63 @@ public class base {
 	            e.printStackTrace();
 	        }
 	       
+	    }
+	 public static String linkValidation(String hyperLinkUrl) {
+	        String result = "";
+	        try {
+	            URL url = new URL(hyperLinkUrl);
+
+	            HttpURLConnection openConnection = (HttpURLConnection) url.openConnection();
+	            openConnection.setConnectTimeout(5000);
+	            openConnection.connect();
+
+	            if (HttpURLConnection.HTTP_OK == openConnection.getResponseCode()) {
+	                result = hyperLinkUrl + " : OK " + openConnection.getResponseCode();
+	            } else {
+	                result = hyperLinkUrl + " : " + openConnection.getResponseMessage();
+	            }
+	        } catch (Exception e) {
+	            result = "Exception caught: " + e.getMessage();
+	        }
+	        return result;
+	    }
+	 public static String linkValidation1(String hyperLinkUrl) {
+	        String result = "";
+	        try {
+	            URL url = new URL(hyperLinkUrl);
+
+	            HttpURLConnection openConnection = (HttpURLConnection) url.openConnection();
+	            openConnection.setConnectTimeout(5000);
+	            openConnection.connect();
+
+	            if (HttpURLConnection.HTTP_OK == openConnection.getResponseCode()) {
+	                result = hyperLinkUrl + " : OK " + openConnection.getResponseCode();
+	            } else {
+	                result = hyperLinkUrl + " : " + openConnection.getResponseMessage();
+	            }
+	        } catch (Exception e) {
+	            result = "Exception caught: " + e.getMessage();
+	        }
+	        return result;
+	    }
+	 public static String linkCheck(String hyperLinkUrl) {
+	        String result = "";
+	        try {
+	            URL url = new URL(hyperLinkUrl);
+
+	            HttpURLConnection openConnection = (HttpURLConnection) url.openConnection();
+	            openConnection.setConnectTimeout(5000);
+	            openConnection.connect();
+
+	            if (HttpURLConnection.HTTP_OK == openConnection.getResponseCode()) {
+	                result = hyperLinkUrl + " : OK " + openConnection.getResponseCode();
+	            } else {
+	                result = hyperLinkUrl + " : " + openConnection.getResponseMessage();
+	            }
+	        } catch (Exception e) {
+	            result = "Exception caught: " + e.getMessage();
+	        }
+	        return result;
 	    }
 
 
