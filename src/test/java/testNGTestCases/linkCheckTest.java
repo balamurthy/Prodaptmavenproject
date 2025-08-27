@@ -10,7 +10,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-public class linkCheck extends utilities.base  {
+public class linkCheckTest extends utilities.base  {
 	static WebDriver driver;
 	 boolean isThereBrokenLink=false;	
 		 
@@ -27,7 +27,7 @@ public class linkCheck extends utilities.base  {
 			 driver.findElements(By.tagName("a")).forEach(link->{
 			
 				 String url = link.getAttribute("href");
-				 String message = utilities.base.linkValidation1(url);
+				 String message = utilities.base.linkValidation(url);
 				 System.out.println(message);
 				 Reporter.log(message);
 				 Reporter.log("<br>");

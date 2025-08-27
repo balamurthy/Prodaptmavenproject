@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNGTestCases.linkCheck">
+      <class name="testNGTestCases.ExcelToDataProvider">
         <methods>
-          <include name="linkTest"/>
+          <include name="beforeClass"/>
+          <include name="login" invocation-numbers="0 2"/>
+          <include name="afterClass"/>
         </methods>
-      </class> <!-- testNGTestCases.linkCheck -->
+      </class> <!-- testNGTestCases.ExcelToDataProvider -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -62,25 +62,6 @@ public class base {
 	        }
 	       
 	    }
-	 public static String linkValidation(String hyperLinkUrl) {
-	        String result = "";
-	        try {
-	            URL url = new URL(hyperLinkUrl);
-
-	            HttpURLConnection openConnection = (HttpURLConnection) url.openConnection();
-	            openConnection.setConnectTimeout(5000);
-	            openConnection.connect();
-
-	            if (HttpURLConnection.HTTP_OK == openConnection.getResponseCode()) {
-	                result = hyperLinkUrl + " : OK " + openConnection.getResponseCode();
-	            } else {
-	                result = hyperLinkUrl + " : " + openConnection.getResponseMessage();
-	            }
-	        } catch (Exception e) {
-	            result = "Exception caught: " + e.getMessage();
-	        }
-	        return result;
-	    }
 	 public static String linkValidation1(String hyperLinkUrl) {
 	        String result = "";
 	        try {
@@ -100,7 +81,7 @@ public class base {
 	        }
 	        return result;
 	    }
-	 public static String linkCheck(String hyperLinkUrl) {
+		 public static String linkValidation(String hyperLinkUrl) {
 	        String result = "";
 	        try {
 	            URL url = new URL(hyperLinkUrl);
