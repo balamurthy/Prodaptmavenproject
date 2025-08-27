@@ -13,7 +13,7 @@ import utilities.ExcelApiTest;
  
 public class ExcelToDataProvider extends utilities.base {
      static WebDriver driver;
-    String xlFilePath = "d:\\Test.xlsx";
+    String xlFilePath = "d:/prodaptMavenProject/src/test/resources/Test.xlsx";
     String sheetName = "Sheet1";
     ExcelApiTest eat = null;
      
