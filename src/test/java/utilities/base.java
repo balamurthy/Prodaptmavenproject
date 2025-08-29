@@ -6,6 +6,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
@@ -33,6 +35,7 @@ public class base {
 
       // Launch Chrome with these options
       driver = new ChromeDriver(options);
+      driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(20));
       return driver;
 	}
 
@@ -62,26 +65,7 @@ public class base {
 	        }
 	       
 	    }
-	 public static String linkValidation1(String hyperLinkUrl) {
-	        String result = "";
-	        try {
-	            URL url = new URL(hyperLinkUrl);
-
-	            HttpURLConnection openConnection = (HttpURLConnection) url.openConnection();
-	            openConnection.setConnectTimeout(5000);
-	            openConnection.connect();
-
-	            if (HttpURLConnection.HTTP_OK == openConnection.getResponseCode()) {
-	                result = hyperLinkUrl + " : OK " + openConnection.getResponseCode();
-	            } else {
-	                result = hyperLinkUrl + " : " + openConnection.getResponseMessage();
-	            }
-	        } catch (Exception e) {
-	            result = "Exception caught: " + e.getMessage();
-	        }
-	        return result;
-	    }
-		 public static String linkValidation(String hyperLinkUrl) {
+			 public static String linkValidation(String hyperLinkUrl) {
 	        String result = "";
 	        try {
 	            URL url = new URL(hyperLinkUrl);
@@ -101,5 +85,11 @@ public class base {
 	        return result;
 	    }
 
-
+			 public static boolean patternMatch(String s, Pattern p)
+			    {
+			    	Matcher m = p.matcher(s);
+			        
+			        return m.matches();
+			        
+			    }
 }

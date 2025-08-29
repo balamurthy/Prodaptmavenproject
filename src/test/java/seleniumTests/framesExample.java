@@ -12,12 +12,15 @@ public class framesExample extends utilities.base{
 		driver=LaunchBrowser();
 		
 		driver.get("https://the-internet.herokuapp.com/nested_frames");
+		driver.switchTo().frame("frame-top");
 		
-		driver.switchTo().frame("frame-bottom");
-		//System.out.println(driver.findElement(By.id("content")).getText());
+		driver.switchTo().frame("frame-middle");
+		System.out.println(driver.findElement(By.id("content")).getText());
+		//System.out.println(driver.findElement(By.tagName("body")).getText());
+		driver.switchTo().parentFrame();
+		driver.switchTo().frame("frame-right");
 		System.out.println(driver.findElement(By.tagName("body")).getText());
-		
-		
+		driver.close();
 	}
 
 }
