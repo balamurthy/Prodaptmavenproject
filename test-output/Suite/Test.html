@@ -55,13 +55,13 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Aug 28 14:38:13 IST 2025</td>
+<td>Started on:</td><td>Fri Aug 29 14:50:36 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (109 ms)</td>
+<tr><td>Total time:</td><td>19 seconds (19781 ms)</td>
 </tr><tr>
-<td>Included groups:</td><td>sanity </td>
+<td>Included groups:</td><td></td>
 </tr><tr>
 <td>Excluded groups:</td><td></td>
 </tr>
@@ -75,13 +75,17 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestCases.LoginPageTestCases.DoLogin()'><b>DoLogin</b><br>Test class: TestCases.LoginPageTestCases</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;Pages.LoginPage.enterUsername(String)&quot; because &quot;this.lp&quot; is null
-	at TestCases.LoginPageTestCases.DoLogin(LoginPageTestCases.java:78)
+<td title='extentReportTests.ExtentTC1.TC1Step2()'><b>TC1Step2</b><br>Test class: extentReportTests.ExtentTC1</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at extentReportTests.ExtentTC1.TC1Step2(ExtentTC1.java:18)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1278254413", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1278254413'><pre>java.lang.NullPointerException: Cannot invoke &quot;Pages.LoginPage.enterUsername(String)&quot; because &quot;this.lp&quot; is null
-	at TestCases.LoginPageTestCases.DoLogin(LoginPageTestCases.java:78)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace253011924", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace253011924'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at extentReportTests.ExtentTC1.TC1Step2(ExtentTC1.java:18)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -110,7 +114,71 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>TestCases.LoginPageTestCases@4fb0f2b9</td></tr>
+<td>extentReportTests.ExtentTC1@359f7cdf</td></tr>
+<tr>
+<td title='extentReportTests.ExtentTC2.TC2Step2()'><b>TC2Step2</b><br>Test class: extentReportTests.ExtentTC2</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at extentReportTests.ExtentTC2.TC2Step2(ExtentTC2.java:18)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1037854997", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1037854997'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at extentReportTests.ExtentTC2.TC2Step2(ExtentTC2.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>extentReportTests.ExtentTC2@4a94ee4</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='extentReportTests.ExtentTC3Login.login()'><b>login</b><br>Test class: extentReportTests.ExtentTC3Login</td>
+<td></td>
+<td>7</td>
+<td>extentReportTests.ExtentTC3Login@c8c12ac</td></tr>
+<tr>
+<td title='extentReportTests.ExtentTC2.TC2Step1()'><b>TC2Step1</b><br>Test class: extentReportTests.ExtentTC2</td>
+<td></td>
+<td>0</td>
+<td>extentReportTests.ExtentTC2@4a94ee4</td></tr>
+<tr>
+<td title='extentReportTests.ExtentTC1.TC1Step1()'><b>TC1Step1</b><br>Test class: extentReportTests.ExtentTC1</td>
+<td></td>
+<td>0</td>
+<td>extentReportTests.ExtentTC1@359f7cdf</td></tr>
 </table><p>
 </body>
 </html>

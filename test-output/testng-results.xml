@@ -1,29 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="1" failed="2" skipped="0">
+<testng-results ignored="0" total="5" passed="3" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-29T11:34:58 IST" name="Default suite" finished-at="2025-08-29T11:35:54 IST" duration-ms="55649">
+  <suite started-at="2025-08-29T14:50:36 IST" name="Suite" finished-at="2025-08-29T14:50:56 IST" duration-ms="19781">
     <groups>
     </groups>
-    <test started-at="2025-08-29T11:34:58 IST" name="Default test" finished-at="2025-08-29T11:35:54 IST" duration-ms="55649">
-      <class name="testNGTestCases.ExcelToDataProvider">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:testNGTestCases.ExcelToDataProvider@77847718]" started-at="2025-08-29T11:34:58 IST" name="beforeClass" finished-at="2025-08-29T11:35:11 IST" duration-ms="12899" status="PASS">
+    <test started-at="2025-08-29T14:50:36 IST" name="Test" finished-at="2025-08-29T14:50:56 IST" duration-ms="19781">
+      <class name="extentReportTests.ExtentTC1">
+        <test-method signature="TC1Step1()[pri:0, instance:extentReportTests.ExtentTC1@359f7cdf]" started-at="2025-08-29T14:50:36 IST" name="TC1Step1" finished-at="2025-08-29T14:50:36 IST" duration-ms="203" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method signature="login(java.lang.String,java.lang.String)[pri:0, instance:testNGTestCases.ExcelToDataProvider@77847718]" started-at="2025-08-29T11:35:15 IST" name="login" data-provider="userData" finished-at="2025-08-29T11:35:30 IST" duration-ms="14588" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[someuser1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[abcd]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- TC1Step1 -->
+        <test-method signature="TC1Step2()[pri:0, instance:extentReportTests.ExtentTC1@359f7cdf]" started-at="2025-08-29T14:50:36 IST" name="TC1Step2" finished-at="2025-08-29T14:50:37 IST" duration-ms="92" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -32,11 +20,9 @@
               <![CDATA[java.lang.AssertionError: expected [true] but found [false]
 at org.testng.Assert.fail(Assert.java:99)
 at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:819)
-at org.testng.Assert.assertEquals(Assert.java:829)
-at testNGTestCases.ExcelToDataProvider.login(ExcelToDataProvider.java:42)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at org.testng.Assert.assertTrue(Assert.java:55)
+at extentReportTests.ExtentTC1.TC1Step2(ExtentTC1.java:18)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -68,73 +54,25 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="login(java.lang.String,java.lang.String)[pri:0, instance:testNGTestCases.ExcelToDataProvider@77847718]" started-at="2025-08-29T11:35:30 IST" name="login" data-provider="userData" finished-at="2025-08-29T11:35:34 IST" duration-ms="4425" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin123]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- TC1Step2 -->
+      </class> <!-- extentReportTests.ExtentTC1 -->
+      <class name="extentReportTests.ExtentTC2">
+        <test-method signature="TC2Step1()[pri:0, instance:extentReportTests.ExtentTC2@4a94ee4]" started-at="2025-08-29T14:50:37 IST" name="TC2Step1" finished-at="2025-08-29T14:50:37 IST" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="login(java.lang.String,java.lang.String)[pri:0, instance:testNGTestCases.ExcelToDataProvider@77847718]" started-at="2025-08-29T11:35:34 IST" name="login" data-provider="userData" finished-at="2025-08-29T11:35:46 IST" duration-ms="11348" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[thirduser]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[third]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        </test-method> <!-- TC2Step1 -->
+        <test-method signature="TC2Step2()[pri:0, instance:extentReportTests.ExtentTC2@4a94ee4]" started-at="2025-08-29T14:50:37 IST" name="TC2Step2" finished-at="2025-08-29T14:50:37 IST" duration-ms="21" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@placeholder="Username"]"}
-  (Session info: chrome=139.0.7258.139)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f2ad9fa4306ede7d942b3a50da17020b, findElement {value=//input[@placeholder="Username"], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.139, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60963}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60963/devtoo..., se:cdpVersion: 139.0.7258.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f2ad9fa4306ede7d942b3a50da17020b]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@placeholder="Username"]"}
-  (Session info: chrome=139.0.7258.139)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f2ad9fa4306ede7d942b3a50da17020b, findElement {value=//input[@placeholder="Username"], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.139, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60963}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60963/devtoo..., se:cdpVersion: 139.0.7258.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f2ad9fa4306ede7d942b3a50da17020b
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-at testNGTestCases.ExcelToDataProvider.login(ExcelToDataProvider.java:26)
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at org.testng.Assert.assertTrue(Assert.java:55)
+at extentReportTests.ExtentTC2.TC2Step2(ExtentTC2.java:18)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -163,15 +101,25 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC2Step2 -->
+      </class> <!-- extentReportTests.ExtentTC2 -->
+      <class name="extentReportTests.ExtentTC3Login">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:extentReportTests.ExtentTC3Login@c8c12ac]" started-at="2025-08-29T14:50:37 IST" name="initialize" finished-at="2025-08-29T14:50:48 IST" duration-ms="11236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="login()[pri:0, instance:extentReportTests.ExtentTC3Login@c8c12ac]" started-at="2025-08-29T14:50:48 IST" name="login" finished-at="2025-08-29T14:50:56 IST" duration-ms="7941" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:testNGTestCases.ExcelToDataProvider@77847718]" started-at="2025-08-29T11:35:46 IST" name="afterClass" finished-at="2025-08-29T11:35:54 IST" duration-ms="8060" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:extentReportTests.ExtentTC3Login@c8c12ac]" started-at="2025-08-29T14:50:58 IST" name="closeBrowser" finished-at="2025-08-29T14:51:00 IST" duration-ms="1746" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- testNGTestCases.ExcelToDataProvider -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- extentReportTests.ExtentTC3Login -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
