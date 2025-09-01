@@ -8,21 +8,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-public class ChkBoxRadioBtn {
+public class ChkBoxRadioBtn extends utilities.base{
     static WebDriver driver;
 	public static void main(String[] args) {
 		// Create a new instance of the FireFox driver
-		String exePath = "d://chromedriver.exe";
-		System.setProperty("webdriver.chrome.driver", exePath);
-		driver = new ChromeDriver();
+		driver = LaunchBrowser();
 		
-		// Put an Implicit wait, 
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		// Launch the URL
 		driver.get("http://demoqa.com/automation-practice-form");
 		
 		List<WebElement> rdBtn_gender= driver.findElements(By.name("gender"));
+		
+		System.out.println("There are "+ rdBtn_gender.size() + " options in radio buttons");
 		
 		// Create a boolean variable which will hold the value (True/False)
 		boolean bValue = false;

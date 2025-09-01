@@ -1,16 +1,20 @@
 package testNGTestCases;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class HomePageTests extends utilities.base {
+import utilities.base;
+
+public class HomePageTests extends base {
   
 	static WebDriver driver;
 
@@ -48,8 +52,8 @@ public class HomePageTests extends utilities.base {
 		 driver=LaunchBrowser(); 
 		 driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		
-		 <ArrayList> links=(ArrayList) driver.findElements(By.tagName("a"));
-		 System.out.println(links.getSize());
+		 List<WebElement> links=driver.findElements(By.tagName("a"));
+		 System.out.println(links.size());
 			 
 		 driver.findElements(By.tagName("a")).forEach(link->{
 			 String url=link.getAttribute("href");

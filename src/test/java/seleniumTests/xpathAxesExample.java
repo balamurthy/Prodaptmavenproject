@@ -14,13 +14,9 @@ public class xpathAxesExample {
 		// TODO Auto-generated method stub
 
 		//file:///D:/wrapper.html
-		String exePath = "d://seleniu/geckodriver.exe";
-		System.setProperty("webdriver.gecko.driver", exePath);
-		
 		WebElement txt_email,lnk_logout;
 		
 		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		// open the browser with the url
 		driver.get("https://money.rediff.com/gainers/bse/daily/groupa");
 		

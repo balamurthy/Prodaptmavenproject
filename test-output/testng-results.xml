@@ -1,28 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="3" failed="2" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-29T14:50:36 IST" name="Suite" finished-at="2025-08-29T14:50:56 IST" duration-ms="19781">
+  <suite started-at="2025-09-01T11:14:08 IST" name="Default suite" finished-at="2025-09-01T11:14:08 IST" duration-ms="94">
     <groups>
     </groups>
-    <test started-at="2025-08-29T14:50:36 IST" name="Test" finished-at="2025-08-29T14:50:56 IST" duration-ms="19781">
-      <class name="extentReportTests.ExtentTC1">
-        <test-method signature="TC1Step1()[pri:0, instance:extentReportTests.ExtentTC1@359f7cdf]" started-at="2025-08-29T14:50:36 IST" name="TC1Step1" finished-at="2025-08-29T14:50:36 IST" duration-ms="203" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC1Step1 -->
-        <test-method signature="TC1Step2()[pri:0, instance:extentReportTests.ExtentTC1@359f7cdf]" started-at="2025-08-29T14:50:36 IST" name="TC1Step2" finished-at="2025-08-29T14:50:37 IST" duration-ms="92" status="FAIL">
+    <test started-at="2025-09-01T11:14:08 IST" name="Default test" finished-at="2025-09-01T11:14:08 IST" duration-ms="94">
+      <class name="seleniumTests.SoftAssertExample">
+        <test-method signature="testSoftAssertions()[pri:0, instance:seleniumTests.SoftAssertExample@74e52303]" started-at="2025-09-01T11:14:08 IST" name="testSoftAssertions" finished-at="2025-09-01T11:14:08 IST" duration-ms="30" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [true] but found [false]]]>
+              <![CDATA[The following asserts failed:
+Strings are equal expected [TestNG] but found [Selenium],
+Object should not be null expected object to not be null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertTrue(Assert.java:45)
-at org.testng.Assert.assertTrue(Assert.java:55)
-at extentReportTests.ExtentTC1.TC1Step2(ExtentTC1.java:18)
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+Strings are equal expected [TestNG] but found [Selenium],
+Object should not be null expected object to not be null
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+at seleniumTests.SoftAssertExample.testSoftAssertions(SoftAssertExample.java:18)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -54,72 +52,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC1Step2 -->
-      </class> <!-- extentReportTests.ExtentTC1 -->
-      <class name="extentReportTests.ExtentTC2">
-        <test-method signature="TC2Step1()[pri:0, instance:extentReportTests.ExtentTC2@4a94ee4]" started-at="2025-08-29T14:50:37 IST" name="TC2Step1" finished-at="2025-08-29T14:50:37 IST" duration-ms="11" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC2Step1 -->
-        <test-method signature="TC2Step2()[pri:0, instance:extentReportTests.ExtentTC2@4a94ee4]" started-at="2025-08-29T14:50:37 IST" name="TC2Step2" finished-at="2025-08-29T14:50:37 IST" duration-ms="21" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertTrue(Assert.java:45)
-at org.testng.Assert.assertTrue(Assert.java:55)
-at extentReportTests.ExtentTC2.TC2Step2(ExtentTC2.java:18)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC2Step2 -->
-      </class> <!-- extentReportTests.ExtentTC2 -->
-      <class name="extentReportTests.ExtentTC3Login">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:extentReportTests.ExtentTC3Login@c8c12ac]" started-at="2025-08-29T14:50:37 IST" name="initialize" finished-at="2025-08-29T14:50:48 IST" duration-ms="11236" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method signature="login()[pri:0, instance:extentReportTests.ExtentTC3Login@c8c12ac]" started-at="2025-08-29T14:50:48 IST" name="login" finished-at="2025-08-29T14:50:56 IST" duration-ms="7941" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:extentReportTests.ExtentTC3Login@c8c12ac]" started-at="2025-08-29T14:50:58 IST" name="closeBrowser" finished-at="2025-08-29T14:51:00 IST" duration-ms="1746" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- extentReportTests.ExtentTC3Login -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- testSoftAssertions -->
+      </class> <!-- seleniumTests.SoftAssertExample -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
