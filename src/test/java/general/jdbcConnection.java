@@ -5,11 +5,16 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
 import com.mysql.cj.xdevapi.Statement;
    public class jdbcConnection
    {
        @SuppressWarnings("deprecation")
-	public static void main (String[] args)
+	//public static void main (String[] args)
+      @Test
+      public void testJDBCConnection()
        {
            System.out.println("\n\n***** MySQL JDBC Connection Testing *****");
 		   Connection conn = null;
@@ -24,15 +29,23 @@ import com.mysql.cj.xdevapi.Statement;
                conn = DriverManager.getConnection (url, userName, password);
                System.out.println ("\nDatabase Connection Established...");
                
-               String sql = "select country_id,country from country where country = 'India'";
+               String sql = "select count(country_id) from country where country = 'India'";
                java.sql.Statement stmt  = conn.createStatement();
                ResultSet rs    = stmt.executeQuery(sql);
              
+              int count=0;
               // loop through the result set
               while (rs.next()) {
-                  System.out.println(rs.getInt("country_id") + " " + rs.getString("country"));
+                  //System.out.println(rs.getInt("country_id") + " " + rs.getString("country"));
                       
+            	  System.out.println("Number of countries with name 'India': "+rs.getInt(1));
+            	  count=rs.getInt(1);
               }
+              
+              Assert.assertEquals(count, 1);
+              
+              
+             rs.close(); 
           
            }
            
