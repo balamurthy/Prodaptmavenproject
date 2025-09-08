@@ -1,0 +1,25 @@
+let responseText = pm.response.text();
+
+// Check if response text includes <AddResult> tag
+pm.test("Response text includes AddResult tag", function () {
+    pm.expect(responseText).to.include("<AddResult>");
+});
+
+// Extracting the AddResult value from the response text
+const addResultMatch = responseText.match(/<AddResult>(\d+)<\/AddResult>/);
+const addResultValue = addResultMatch ? addResultMatch[1] : null;
+let actual = parseInt(addResultValue);
+// Assuming 'expectedResult' is set in the iteration data from the JSON file
+const expectedResult = pm.iterationData.get("result");
+const num1 = pm.iterationData.get("intA");
+const num2 = pm.iterationData.get("intB");
+
+pm.test(`AddResult check → Num1: ${num1}, Num2: ${num2},Expected: ${expectedResult}, Actual: ${actual}`, function () {
+    pm.expect(actual).to.equal(expectedResult);
+    
+});
+    
+console.log("intA:", pm.iterationData.get("intA"),
+            "intB:", pm.iterationData.get("intB"),
+            "Expected:", expectedResult,
+            "Actual:", addResultValue);
