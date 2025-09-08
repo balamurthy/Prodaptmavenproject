@@ -1,0 +1,69 @@
+Workflow of Bookstore swagger 
+
+
+
+{
+  "userName": "Test100",
+  "password": "Balamurthy@123"
+}
+
+https://bookstore.toolsqa.com/Account/v1/User
+
+Userid
+4873a60e-bee5-4a16-9727-51bdf016c6d0
+
+
+Token
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlRlc3QxMDAiLCJwYXNzd29yZCI6IkJhbGFtdXJ0aHlAMTIzIiwiaWF0IjoxNzU3MzI0NTY4fQ.RJTyXFBM8AElv5_G8og-qQpPR21mVg8YaRioN8EMqMU
+
+
+
+
+
+
+
+ToDo: 
+
+In the E2E Test of the Bookstore TestNG class,
+
+By default createuser is not present
+
+Include a TestNG method to create a user with random username in the format "un<randomnumber>"
+and a Password "Test@1234"
+
+read the Userid from the response
+Store it in a static variable
+
+Execute the rest of the code with the generated Userid
+
+create a new TestNG test case file and first have the createUser method alone
+
+Create a user defined method to generate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
