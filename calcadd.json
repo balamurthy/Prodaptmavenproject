@@ -1,0 +1,5 @@
+[
+  { "intA": 5, "intB": 10, "result": 15 },
+  { "intA": 20, "intB": 30, "result": 50  },
+  { "intA": 25, "intB": 40, "result": 65 }
+]
